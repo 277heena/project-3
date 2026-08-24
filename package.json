@@ -1,0 +1,33 @@
+{
+  "name": "archconnect",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "bcryptjs": "latest",
+    "connect-mongo": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "helmet": "latest",
+    "mongoose": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "sass": "latest",
+    "vite": "latest",
+    "vite-plugin-pwa": "latest"
+  },
+  "devDependencies": {
+    "concurrently": "latest",
+    "nodemon": "latest"
+  }
+}

@@ -1,0 +1,54 @@
+ARCHCONNECT — EXACT VS CODE AND SUBMISSION STEPS
+
+1. Download and unzip the ArchConnect_Project3 folder.
+2. Open VS Code.
+3. Click File > Open Folder, then select the "archconnect" folder.
+4. Click Terminal > New Terminal.
+5. Run:
+   npm install
+
+6. In the VS Code Explorer, duplicate ".env.example" and rename the copy ".env".
+7. Create a free MongoDB Atlas database at mongodb.com/atlas.
+8. In Atlas, click Connect > Drivers and copy the connection string.
+9. Paste it after MONGODB_URI= in .env. Replace USERNAME, PASSWORD, and CLUSTER.
+10. In .env, replace SESSION_SECRET with any long private sentence (do not upload .env).
+11. Run:
+    npm run dev
+
+12. Open http://localhost:5173 in your browser.
+13. Test: Sign Up > Dashboard > add a project > submit an inquiry > Logout.
+
+GITHUB
+
+14. Create a new empty public GitHub repository named archconnect-project3. Do not add a README.
+15. Copy the repository URL, then run these commands one at a time in VS Code:
+    git init
+    git add .
+    git commit -m "Complete ArchConnect Project 3"
+    git branch -M main
+    git remote add origin PASTE_YOUR_GITHUB_URL_HERE
+    git push -u origin main
+
+LIVE SERVER (RENDER)
+
+16. Go to render.com and sign in with GitHub.
+17. Click New + > Web Service and select archconnect-project3.
+18. Use these settings:
+    Build Command: npm install && npm run build
+    Start Command: npm start
+19. Add these Environment Variables:
+    MONGODB_URI = your MongoDB Atlas connection string
+    SESSION_SECRET = your long private secret
+    NODE_ENV = production
+    CLIENT_URL = temporarily enter https://example.com
+20. Deploy. After Render gives you the final https://...onrender.com URL, edit CLIENT_URL so it exactly matches that URL, then redeploy.
+21. In MongoDB Atlas Network Access, allow 0.0.0.0/0 so Render can connect.
+22. Open the Render link and repeat the test from Step 13.
+
+SUBMIT IN GAP
+
+23. Submit both links:
+    - GitHub URL: https://github.com/YOUR-USERNAME/archconnect-project3
+    - Live URL: https://YOUR-SERVICE.onrender.com
+
+Important: Never commit or upload your .env file. The included .gitignore protects it.

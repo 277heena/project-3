@@ -2,3 +2,5 @@ node_modules
 # Local env and macOS artifacts
 .env
 .DS_Store
+dist/
+atlas-credentials.env
